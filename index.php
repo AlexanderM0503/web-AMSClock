@@ -1,5 +1,8 @@
 <?php
     require_once "start.php";
+    include "server.php";
+
+    $data = getCurrentDate($CONF["timezone"]);
 ?>
 
 <!DOCTYPE html>
@@ -13,15 +16,17 @@
     <body>
         <div class="clock">
             <div class="time">
-                <span id="hours">12</span>
+                <span id="hours"><?php print($data["hours"]); ?></span>
                 <span class="blink-colon">:</span>
-                <span id="minutes">00</span>
+                <span id="minutes"><?php print($data["minutes"]); ?></span>
             </div>
 
             <div class="date">
-                <span id="date">01.01.2000</span>
-                <span id="day">Mon</span>
+                <span id="date"><?php print($data["date"]); ?></span>
+                <span id="day"><?php print($data["day"]); ?></span>
             </div>
         </div>
+
+        <script src="js/main.js"></script>
     </body>
 </html>
