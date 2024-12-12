@@ -1,0 +1,3 @@
+<?php
+
+$CONF["company"] = "AMSClock";
