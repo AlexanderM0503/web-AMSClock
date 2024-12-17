@@ -4,7 +4,8 @@ const minutesBox = document.getElementById("minutes");
 const dateBox = document.getElementById("date");
 const dayBox = document.getElementById("day");
 
-setInterval(() => {
+function GetDate()
+{
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "server.php?date");
     xhr.onreadystatechange = function()
@@ -21,4 +22,7 @@ setInterval(() => {
         }
     };
     xhr.send();
-}, 10000);
+}
+
+GetDate();
+setInterval(GetDate, 10000);
