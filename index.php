@@ -26,6 +26,13 @@
             </div>
         </div>
 
+        <div class="events border" hidden>
+            <div class="event">
+                <div class="title"></div>
+                <div class="text"></div>
+            </div>
+        </div>
+
         <script src="js/main.js"></script>
     </body>
 </html>
